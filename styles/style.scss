@@ -73,6 +73,7 @@ a {
 .buttons {
     display: flex;
     flex-direction: column;
+    margin-top: 1vh;
     align-items: center;
 
 }
@@ -81,7 +82,7 @@ button {
     background-color: #FAC4CF;
     height: 8vh;
     font-family: 'Emilys Candy', cursive;
-    font-size: 2vw;
+    font-size: 1.8vw;
     color: #9886c7;
     letter-spacing: 0.05em;
     border-radius: 1vw;
@@ -96,27 +97,27 @@ button {
     transition: 0.5s;
 }
 
-.row1,
-.row3 {
-    margin-top: 1rem;
+.row {
+    margin-top: 1vh;
 }
 
 .row2 {
-    margin-top: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 70vh;
 }
-
 .row1 > button,
 .row2 > button {
-    width: 10vw;
+    width: 22vh;
 }
 
 .row3 > button {
-    width: 31vw;
+    width: 70vh;
 }
 
 /* === WELCOME === */
 
-.welcome{
+.page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,13 +132,13 @@ button {
     color: #9886c7;
 }
 
-.welcome-button{
+.page-button {
     width: 20vw;
 }
 
 /* === RECETTES === */
 
-.recipes{
+.recipes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +150,6 @@ button {
     width: 100vw;
     height: 100vh;
     text-align: center;
-
 }
 
 .recipe{
@@ -190,14 +190,14 @@ button {
     font-size: 3vw;
 }
 
-.welcome > .text {
+.page > .text {
     padding: 2vh 0;
 }
 
-.welcome > .text:nth-child(2){
+.page > .text:nth-child(2){
     margin-top: 2vh;
 }
-.welcome .text:nth-child(3){
+.page .text:nth-child(3){
     margin-bottom: 2vh;
 }
 

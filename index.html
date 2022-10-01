@@ -42,11 +42,11 @@
             </div><!-- .row3 -->
         </div><!-- .buttons -->
     </div><!-- .game-board -->
-    <div class="welcome none">
+    <div class="welcome page">
         <h2 class="title">Bienvenue dans mon joli petit village !</h2>
         <p class="text">Promène-toi sur le chemin et frappe aux portes des maisons.</p>
         <p class="text">Les gentils villageois ont des surprises pour toi !</p>
-        <button id="start" class="welcome-button btn">Se balader</button>
+        <button type="button" id="start" class="page-button btn">Se balader</button>
     </div><!-- .welcome -->
     <div class="recipes none">
         <div class="recipe">
@@ -63,6 +63,12 @@
             </div><!-- .recipe-buttons -->
         </div><!-- .recipe -->
     </div><!-- .recipes -->
+    <div class="finish page none">
+        <h2 class="title">Félicitation !</h2>
+        <p class="text">Tu as trouvé toutes les recettes.</p>
+        <p class="text">Si tu as aimé découvrir des recettes véganes, n'hésite pas à les essayer et à les partager !</p>
+        <button onclick="window.location.href=window.location.href" id="finish" class="page-button btn">Recommencer</button>
+    </div><!-- .welcome -->
 
     <!-- Script -->
     <script src="js/app.js"></script>
