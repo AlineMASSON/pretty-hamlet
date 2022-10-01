@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bellota+Text:wght@300&family=Delius+Swash+Caps&family=Emilys+Candy&family=Quicksand&display=swap" rel="stylesheet">
+
+    <title>Un joli petit village</title>
+</head>
+<body>
+    <div class="game-board">
+        <div class="screen">
+            <img id="avatar" src="./images/avatar.svg" alt="">
+            <div class="stars">
+                <img src="./images/star.png" alt="" class="star star1 none">
+                <img src="./images/star.png" alt="" class="star star2 none">
+                <img src="./images/star.png" alt="" class="star star3 none">
+            </div><!-- .stars -->
+            <div class="images">
+            </div><!-- .images -->
+        </div><!-- .screen -->
+        <div class="buttons">
+            <div class="row row1">
+                <button class="btn text" id="front" type="button">Avancer</button>
+            </div><!-- .row1 -->
+            <div class="row row2">
+                <button id="left" type="button" class="btn text" >Gauche</button>
+                <button id="back" type="button" class="btn text">Reculer</button>
+                <button id="right" type="button" class="btn text">Droite</button>
+            </div><!-- .row2 -->
+            <div class="row row3">
+                <button class="btn text" id="knock" type="button">Frapper à la porte</button>
+            </div><!-- .row3 -->
+        </div><!-- .buttons -->
+    </div><!-- .game-board -->
+    <div class="welcome">
+        <h2 class="title">Bienvenue dans mon joli petit village !</h2>
+        <p class="text">Promène-toi sur le chemin et frappe aux portes des maisons.</p>
+        <p class="text">Les gentils villageois ont des surprises pour toi !</p>
+        <button id="start" class="welcome-button btn">Se balader</button>
+    </div><!-- .welcome -->
+    <div class="recipes none">
+        <div class="recipe">
+            <button type="button" class="recipe-close">+</button>
+            <h2 class="title">Bravo ! Tu as découverts une nouvelle recette.</h2>
+            <p class="recipe-title text"></p>
+            <div class="recipe-buttons">
+                <a id="dowloadRecipe">
+                    <button type="button" class="recipe-button btn">Télécharger la recette</button>
+                </a>
+                <a id="seeRecipe" target="_blank">
+                    <button type="button" class="recipe-button btn">Voir la recette</button>
+                </a>
+            </div><!-- .recipe-buttons -->
+        </div><!-- .recipe -->
+    </div><!-- .recipes -->
+
+    <!-- Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>

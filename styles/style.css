@@ -1,0 +1,199 @@
+body{
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+/* .game-board {
+    width: 100vw;
+    height: 100vh;
+} */
+
+.screen {
+    position: relative;
+}
+
+#avatar {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    transition: 0.70s;
+}
+
+.images {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    width: 750px;
+    height: 750px;
+}
+
+.images > img {
+    width: 50px;
+    height: 50px;
+}
+
+/* === ETOILES === */
+
+.stars {
+    position: absolute;
+    z-index: 1;
+    width: 750px;
+    height: 750px;
+}
+
+.star {
+    position: absolute;
+    height: 25px;
+}
+
+
+.star:nth-child(1) {
+    left: 113px;
+    top: 240px;
+}
+
+.star:nth-child(2) {
+    left: 453px;
+    top: 90px;
+}
+
+.star:nth-child(3) {
+    left: 615px;
+    top: 443px;
+}
+
+
+/* === BOUTONS === */
+
+.buttons {
+    width: 750px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+button {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .08rem;
+    background-color: #FAC4CF;
+    color: #9886c7;
+    border-radius: 0.35em;
+    border: solid 2px #9886c7;
+    transition: 0.5s;
+    height: 75px;
+    cursor: pointer;
+    font-family: 'Emilys Candy', sans-serif;
+    letter-spacing: 0.15rem;
+}
+   
+.btn:hover {
+    border: solid 7px #9886c7;
+    transition: 0.5s;
+}
+
+.row1,
+.row3 {
+    margin-top: 1rem;
+}
+
+.row2 {
+    margin-top: 0.2rem;
+}
+
+.row1 > button,
+.row2 > button {
+    width: 150px;
+}
+
+.row3 > button {
+    width: 450px;
+}
+
+/* === WELCOME === */
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #FAC4CF;
+    width: 100vw;
+    height: 100vh;
+    color: #9886c7;
+}
+
+.welcome-button{
+    width: 10vw;
+}
+
+/* === RECETTES === */
+
+.recipes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #9886c788;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+    padding: 1em;
+    background-color: #FAC4CF;
+    color: #9886c7;
+    border-radius: 2em;
+    border: solid 2px #9886c7;
+}
+
+.recipe-close{
+    align-self: flex-end;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: #FAC4CF;
+    background-color: #9886c7;
+    transform: rotate(45deg);
+}
+
+.recipe-close:hover{
+    transform: rotate(135deg);
+    transition: 0.2s;
+}
+
+.title{
+    font-family: 'Emilys Candy', cursive;
+    letter-spacing: 0.15rem;
+}
+
+.recipe-buttons{
+    align-self: center;
+}
+
+.recipe-button{
+    width: 20vw;
+}
+
+.none {
+    display: none;
+}
