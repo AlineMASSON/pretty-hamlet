@@ -1,156 +1,161 @@
 const app = {
     state: {
-        currentX: 100,
-        currentY: 700,
-        x: 50,
-        y: 50,
+        // Images de 15 x 15 cases
+        // ==== sizeBox ===>
+        // 70vh (hauteur totale de l'image)
+        // 15 (nb de case dans une colone et une ligne)
+        sizeBox: (70/15),
+        currentX: 2,
+        currentY: 14,
+        x: 1,
+        y: 1,
         allowed: [
             // 1ère ligne verticale
             {
-                x: 100,
-                y: 700,
+                x: 2,
+                y: 14,
             },
             {
-                x: 100,
-                y: 650,
+                x: 2,
+                y: 13,
             },
             {
-                x: 100,
-                y: 600,
+                x: 2,
+                y: 12,
             },
             {
-                x: 100,
-                y: 550,
+                x: 2,
+                y: 11,
             },
             {
-                x: 100,
-                y: 500,
+                x: 2,
+                y: 10,
             },
             {
-                x: 100,
-                y: 450,
+                x: 2,
+                y: 9,
             },
             { // Arrivée 1ère maison
-                x: 100,
-                y: 400,
+                x: 2,
+                y: 8,
             },
             // 1ère ligne horizontale
             {
-                x: 150,
-                y: 400,
+                x: 3,
+                y: 8,
             },
             {
-                x: 200,
-                y: 400,
+                x: 4,
+                y: 8,
             },
             {
-                x: 250,
-                y: 400,
+                x: 5,
+                y: 8,
             },,
             // 2ème ligne verticale
             {
-                x: 250,
-                y: 350,
+                x: 5,
+                y: 7,
             },
             {
-                x: 250,
-                y: 300,
+                x: 5,
+                y: 6,
             },
             // 2ème ligne horizontale
             {
-                x: 300,
-                y: 300,
+                x: 6,
+                y: 6,
             },
             {
-                x: 350,
-                y: 300,
+                x: 7,
+                y: 6,
             },
             {
-                x: 400,
-                y: 300,
+                x: 8,
+                y: 6,
             },
             // 3ème ligne verticale
             { // Arrivée 2ème maison
-                x: 400,
-                y: 250,
+                x: 8,
+                y: 5,
             },
             // 4ème ligne verticale
             {
-                x: 350,
-                y: 350,
+                x: 7,
+                y: 7,
             },
             {
-                x: 350,
-                y: 400,
+                x: 7,
+                y: 8,
             },
             {
-                x: 350,
-                y: 450,
+                x: 7,
+                y: 9,
             },
             {
-                x: 350,
-                y: 500,
+                x: 7,
+                y: 10,
             },
             {
-                x: 350,
-                y: 550,
+                x: 7,
+                y: 11,
             },
             {
-                x: 350,
-                y: 600,
+                x: 7,
+                y: 12,
             },
             {
-                x: 350,
-                y: 650,
+                x: 7,
+                y: 13,
             },
             // 3ème ligne horizontale
             {
-                x: 400,
-                y: 650,
+                x: 8,
+                y: 13,
             },
             {
-                x: 450,
-                y: 650,
+                x: 9,
+                y: 13,
             },
             {
-                x: 500,
-                y: 650,
+                x: 10,
+                y: 13,
             },
             {
-                x: 550,
-                y: 650,
+                x: 11,
+                y: 13,
             },
             {
-                x: 600,
-                y: 650,
+                x: 12,
+                y: 13,
             },
             // 5ème ligne verticale
             { // Arrivée 3ème maison
-                x: 600,
-                y: 600,
+                x: 12,
+                y: 12,
             }
         ],
 
         doors: [
             { //Arrivée 1ère maison
-                x: 100,
-                y: 400,
+                x: 2,
+                y: 8,
                 recipe: 1,
                 title: "Burger végan : raclette végétale, chanterelles et crème de céleri",
                 href: "burger",
                 download: "burger_vegan_raclette_chanterelles_céleri",
             },
             { // Arrivée 2ème maison
-                x: 400,
-                y: 250,
+                x: 8,
+                y: 5,
                 recipe: 2,
                 title: "Flammekueche végane",
                 href: "flammekueche",
                 download: "flammekueche_vegane",
             },
             { // Arrivée 3ème maison
-                x: 600,
-                y: 600,
+                x: 12,
+                y: 12,
                 recipe: 3,
                 title: "Salade de \"chèvre\" chaud végétal au romarin, jeunes pousses d'épinards et cerneaux de noix",
                 href: "chevreChaud",
@@ -211,7 +216,9 @@ const app = {
 
     // === Deplacer l'avatar
     moveAvatar: function(currentX, currentY) {
-        avatar.setAttribute('style', `left: ${currentX}px; top: ${currentY}px`);
+        const newX = currentX * app.state.sizeBox;
+        const newY = currentY * app.state.sizeBox;
+        avatar.setAttribute('style', `left: ${newX}vh; top: ${newY}vh`);
         return ( currentX, currentY );
     },
 

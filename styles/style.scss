@@ -1,40 +1,40 @@
 body{
     font-size: 1.5rem;
     font-family: 'Quicksand', sans-serif;
-    /* width: 100vw;
-    height: 100vh; */
-}
-
-/* .game-board {
     width: 100vw;
     height: 100vh;
-} */
+    background-image: url(../images/background.png);
+}
+
+.game-board {
+    width: 100vw;
+    height: 100vh;
+}
 
 a {
     text-decoration : none;
 }
 .screen {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 #avatar {
     position: absolute;
     z-index: 1;
-    width: 50px;
-    height: 50px;
+    width: calc(70vh / 15);
+    height: calc(70vh / 15);
     transition: 0.70s;
 }
 
-.images {
-    background-image: url(../images/background.png);
+.image {
+    position: relative;
+    background-image: url(../images/screen.png);
     background-size: cover;
-    width: 750px;
-    height: 750px;
-}
-
-.images > img {
-    width: 50px;
-    height: 50px;
+    width: 70vh;
+    height: 70vh;
+    box-shadow: 0 0 1em #fac4cf;
 }
 
 /* === ETOILES === */
@@ -42,37 +42,35 @@ a {
 .stars {
     position: absolute;
     z-index: 1;
-    width: 750px;
-    height: 750px;
+    width: 70vh;
+    height: 70vh;
 }
 
 .star {
     position: absolute;
-    height: 25px;
+    height: 2.3vh;
 }
 
 
 .star:nth-child(1) {
-    left: 113px;
-    top: 240px;
+    left: 10.5vh;
+    top: 22.4vh;
 }
 
 .star:nth-child(2) {
-    left: 453px;
-    top: 90px;
+    left: 42.3vh;
+    top: 8.4vh;
 }
 
 .star:nth-child(3) {
-    left: 615px;
-    top: 443px;
+    left: 57.4vh;
+    top: 41.3vh;
 }
 
 
 /* === BOUTONS === */
 
 .buttons {
-    width: 750px;
-    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,13 +79,14 @@ a {
 
 button {
     background-color: #FAC4CF;
-    height: 9vh;
+    height: 8vh;
     font-family: 'Emilys Candy', cursive;
     font-size: 2vw;
     color: #9886c7;
     letter-spacing: 0.05em;
     border-radius: 1vw;
     border: solid 0.2vw #9886c7;
+    box-shadow: 0 0 1em #fac4cf;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -108,11 +107,11 @@ button {
 
 .row1 > button,
 .row2 > button {
-    width: 150px;
+    width: 10vw;
 }
 
 .row3 > button {
-    width: 450px;
+    width: 31vw;
 }
 
 /* === WELCOME === */
