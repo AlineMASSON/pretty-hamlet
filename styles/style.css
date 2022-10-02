@@ -206,14 +206,14 @@ button {
     flex-direction: column;
     justify-content: flex-end;
   }
-  
-  /* Commun */
-  .image,
-  .stars {
-    width: 100vw;
-    height: 100vw;
-  }
 
+    /* Commun */
+    .image,
+    .stars {
+      width: 100vw;
+      height: 100vw;
+    }
+  
   /* Avatar */
   #avatar {
     width: calc(100vw / 15);
@@ -249,14 +249,14 @@ button {
     font-size: 4vw;
   }
 
-  .row2,
-  .row3 > button {
-    width: 95vw;
-  }
-  
   .row1 > button,
   .row2 > button {
     width: 30vw;
+  }
+
+  .row2,
+  .row3 > button{
+    width: 95vw;
   }
 
   /* --- RECETTES --- */
@@ -278,6 +278,65 @@ button {
   .recipe-button {
     width: 38vw;
     font-size: 3vw;
+  }
+  
+  @media (orientation: landscape) {
+    /* --- GAME BOARD --- */
+    .game-board {
+      align-items: center;
+      flex-direction: row;
+      justify-content:space-between;
+    }
+    /* Commun */
+    .image,
+    .stars {
+      width: 100vh;
+      height: 100vh;
+    }
+    
+    /* Etoile */
+    .star {
+      width: 4vh;
+    }
+
+    /* Boutons */
+    .buttons {
+      flex: 1;
+    }
+    .row > button {
+      font-size: 3vw;
+      height: 15vh;
+    }
+
+    .row1 > button,
+    .row2 > button {
+      width: calc(calc(95vw - 100vh) / 3);
+
+    }
+
+    .row2,
+    .row3 > button {
+      width: calc(98vw - 100vh);
+    }
+
+    /* Avatar */
+    #avatar {
+      width: calc(100vh / 15);
+      height: calc(100vh / 15);
+    }
+
+    /* --- RECETTES --- */
+    .recipe {
+      width: 80vw;
+      height: 80vh;
+      border-radius: 2vh;
+    }
+
+    .recipe-close {
+      height: 8vh;
+      width: 8vh;
+      line-height: 0;
+    }
   }
 }
 
@@ -347,10 +406,10 @@ button {
   .row3 > button {
     width: 70vh;
   }
-  
+
   .row1 > button,
   .row2 > button {
-    width: 22vh;
+    width: 30vw;
   }
 
   /* --- RECETTES --- */
@@ -364,6 +423,7 @@ button {
     height: 8vh;
     width: 8vh;
   }
+
 }
 
 /* === DESKTOP === */

@@ -144,6 +144,10 @@ const app = {
         href: "burger",
         download: "burger_vegan_raclette_chanterelles_céleri",
         visited: false,
+        star: {
+          x: 2.2,
+          y: 4.7,
+        }
       },
       { // Arrivée 2ème maison
         x: 8,
@@ -153,6 +157,10 @@ const app = {
         href: "flammekueche",
         download: "flammekueche_vegane",
         visited: false,
+        star: {
+          x: 9,
+          y: 1.7,
+        }
       },
       { // Arrivée 3ème maison
         x: 12,
@@ -162,6 +170,10 @@ const app = {
         href: "chevreChaud",
         download: "salade_chevre_chaud_vegetal",
         visited: false,
+        star: {
+          x: 12.2,
+          y: 8.7,
+        }
       }
     ],
   },
@@ -254,13 +266,25 @@ const app = {
       app.dowloadRecipe.setAttribute("href", `download/${href}.pdf`);
       app.dowloadRecipe.setAttribute("download", `${download}.pdf`);
       app.seeRecipe.setAttribute("href", `download/${href}.pdf`);
-      const star = document.querySelector(`.star${recipe}`);
-      star.classList.remove('none');
+
+      app.isVisited(recipe);
+      console.log(app.state.doors[recipe-1].visited);
       // Fermer la page recette
       app.recipeClose.addEventListener('click', app.handleClickClose);
       
-      return (app.state.doors[recipe-1].visited = true);
     };
+  },
+
+  isVisited: function (recipe) {
+    const star = document.querySelector(`.star${recipe}`);
+    const door = app.state.doors[recipe-1].star;
+    const x = door.x * app.state.sizeBox;
+    const y = door.y * app.state.sizeBox;
+    star.setAttribute('style', `left: ${x}px; top: ${y}px`);
+    star.classList.remove('none');
+    console.log('x', x);
+    console.log('y', y);
+    return (app.state.doors[recipe-1].visited = true);
   },
 
   handleClickClose: function () {
