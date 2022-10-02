@@ -2,13 +2,12 @@ const app = {
   state: {
     // Images de 15 x 15 cases
     // ==== sizeBox ===>
-    // 70vh (hauteur totale de l'image)
+    // offsetHeight (hauteur totale de l'image)
     // 15 (nb de case dans une colone et une ligne)
-    sizeBox: (70 / 15),
+    sizeBox: document.querySelector('.image').offsetHeight / 15,
     currentX: 2,
     currentY: 14,
-    x: 1,
-    y: 1,
+    move: 1,
     allowed: [
       // 1ère ligne verticale
       {
@@ -183,25 +182,25 @@ const app = {
     // Avancer
     app.front = document.querySelector('#front');
     app.front.addEventListener('click', () => {
-      app.CanMove(0, -app.state.y);
+      app.CanMove(0, -app.state.move);
     });
 
     // Gauche
     app.left = document.querySelector('#left');
     left.addEventListener('click', () => {
-      app.CanMove(-app.state.x, 0);
+      app.CanMove(-app.state.move, 0);
     });
 
     // Reculer
     app.back = document.querySelector('#back');
     back.addEventListener('click', () => {
-      app.CanMove(0, app.state.y);
+      app.CanMove(0, app.state.move);
     });
 
     // Droite
     app.right = document.querySelector('#right');
     right.addEventListener('click', () => {
-      app.CanMove(app.state.x, 0);
+      app.CanMove(app.state.move, 0);
     });
 
     // Frapper à la porte
@@ -221,7 +220,7 @@ const app = {
   moveAvatar: function (currentX, currentY) {
     const newX = currentX * app.state.sizeBox;
     const newY = currentY * app.state.sizeBox;
-    avatar.setAttribute('style', `left: ${newX}vh; top: ${newY}vh`);
+    avatar.setAttribute('style', `left: ${newX}px; top: ${newY}px`);
     return (currentX, currentY);
   },
 
