@@ -1,215 +1,219 @@
-body{
-    font-size: 1.5rem;
-    font-family: 'Quicksand', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/background.png);
+body {
+  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/background.png);
 }
 
 .game-board {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
-    text-decoration : none;
+  text-decoration: none;
 }
+
 .screen {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 #avatar {
-    position: absolute;
-    z-index: 1;
-    width: calc(70vh / 15);
-    height: calc(70vh / 15);
-    transition: 0.70s;
+  position: absolute;
+  z-index: 1;
+  width: calc(70vh / 15);
+  height: calc(70vh / 15);
+  transition: 0.7s;
 }
 
 .image {
-    position: relative;
-    background-image: url(../images/screen.png);
-    background-size: cover;
-    width: 70vh;
-    height: 70vh;
-    box-shadow: 0 0 1em #fac4cf;
+  position: relative;
+  background-image: url(../images/screen.png);
+  background-size: cover;
+  width: 70vh;
+  height: 70vh;
+  box-shadow: 0 0 1em #fac4cf;
 }
 
 /* === ETOILES === */
 
 .stars {
-    position: absolute;
-    z-index: 1;
-    width: 70vh;
-    height: 70vh;
+  position: absolute;
+  z-index: 1;
+  width: 70vh;
+  height: 70vh;
 }
 
 .star {
-    position: absolute;
-    height: 2.3vh;
+  position: absolute;
+  height: 2.3vh;
 }
 
-
 .star:nth-child(1) {
-    left: 10.5vh;
-    top: 22.4vh;
+  left: 10.5vh;
+  top: 22.4vh;
 }
 
 .star:nth-child(2) {
-    left: 42.3vh;
-    top: 8.4vh;
+  left: 42.3vh;
+  top: 8.4vh;
 }
 
 .star:nth-child(3) {
-    left: 57.4vh;
-    top: 41.3vh;
+  left: 57.4vh;
+  top: 41.3vh;
 }
-
 
 /* === BOUTONS === */
 
 .buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1vh;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+  align-items: center;
 }
 
 button {
-    background-color: #FAC4CF;
-    height: 8vh;
-    font-family: 'Emilys Candy', cursive;
-    font-size: 1.8vw;
-    color: #9886c7;
-    letter-spacing: 0.05em;
-    border-radius: 1vw;
-    border: solid 0.2vw #9886c7;
-    box-shadow: 0 0 1em #fac4cf;
-    transition: 0.5s;
-    cursor: pointer;
+  background-color: #fac4cf;
+  height: 8vh;
+  font-family: 'Emilys Candy', cursive;
+  font-size: 1.8vw;
+  color: #9886c7;
+  letter-spacing: 0.05em;
+  border-radius: 1vw;
+  border: solid 0.2vw #9886c7;
+  box-shadow: 0 0 1em #fac4cf;
+  transition: 0.5s;
+  cursor: pointer;
 }
-   
+
 .btn:hover {
-    border: solid 0.5vw #9886c7;
-    transition: 0.5s;
+  border: solid 0.5vw #9886c7;
+  transition: 0.5s;
 }
 
 .row {
-    margin-top: 1vh;
+  margin-top: 1vh;
 }
 
 .row2 {
-    display: flex;
-    justify-content: space-between;
-    width: 70vh;
+  display: flex;
+  justify-content: space-between;
+  width: 70vh;
 }
+
 .row1 > button,
 .row2 > button {
-    width: 22vh;
+  width: 22vh;
 }
 
 .row3 > button {
-    width: 70vh;
+  width: 70vh;
 }
 
 /* === WELCOME === */
 
 .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: #FAC4CF;
-    width: 100vw;
-    height: 100vh;
-    color: #9886c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #fac4cf;
+  width: 100vw;
+  height: 100vh;
+  color: #9886c7;
 }
 
 .page-button {
-    width: 20vw;
+  width: 20vw;
 }
 
 /* === RECETTES === */
 
 .recipes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: #9886c788;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #9886c788;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
 }
 
-.recipe{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1;
-    width: 50vw;
-    height: 50vh;
-    padding: 1em;
-    background-color: #FAC4CF;
-    color: #9886c7;
-    border-radius: 2em;
-    border: solid 2px #9886c7;
+.recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  width: 50vw;
+  height: 50vh;
+  padding: 1em;
+  background-color: #fac4cf;
+  color: #9886c7;
+  border-radius: 2em;
+  border: solid 2px #9886c7;
 }
 
-.recipe-close{
-    align-self: flex-end;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    font-family: sans-serif;
-    color: #FAC4CF;
-    padding: 0;
-    border: 0;
-    background-color: #9886c7;
-    transform: rotate(45deg);
+.recipe-close {
+  align-self: flex-end;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-family: sans-serif;
+  color: #fac4cf;
+  padding: 0;
+  border: 0;
+  background-color: #9886c7;
+  transform: rotate(45deg);
 }
 
-.recipe-close:hover{
-    transform: rotate(135deg);
-    transition: 0.2s;
+.recipe-close:hover {
+  transform: rotate(135deg);
+  transition: 0.2s;
 }
 
-.title{
-    font-family: 'Emilys Candy', cursive;
-    letter-spacing: 0.05em;
-    font-size: 3vw;
+.title {
+  font-family: 'Emilys Candy', cursive;
+  letter-spacing: 0.05em;
+  font-size: 3vw;
+}
+
+.text {
+  font-size: 1.5vw;
 }
 
 .page > .text {
-    padding: 2vh 0;
+  padding: 2vh 0;
 }
 
-.page > .text:nth-child(2){
-    margin-top: 2vh;
-}
-.page .text:nth-child(3){
-    margin-bottom: 2vh;
+.page > .text:nth-child(2) {
+  margin-top: 2vh;
 }
 
-.recipe-buttons{
-    align-self: center;
+.page .text:nth-child(3) {
+  margin-bottom: 2vh;
 }
 
-.recipe-button{
-    width: 22vw;
-    font-size: 1.8vw;
+.recipe-buttons {
+  align-self: center;
+}
+
+.recipe-button {
+  width: 22vw;
+  font-size: 1.8vw;
 }
 
 .none {
-    display: none;
+  display: none;
 }
