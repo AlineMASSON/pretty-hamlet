@@ -1,86 +1,19 @@
+/* === GLOBAL === */
 body {
-  font-size: 1.5rem;
-  font-family: 'Quicksand', sans-serif;
-  width: 100vw;
-  height: 100vh;
   background-image: url(../images/background.png);
-}
-
-.game-board {
   width: 100vw;
   height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
 }
 
-.screen {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-#avatar {
-  position: absolute;
-  z-index: 1;
-  width: calc(70vh / 15);
-  height: calc(70vh / 15);
-  transition: 0.7s;
-}
-
-.image {
-  position: relative;
-  background-image: url(../images/screen.png);
-  background-size: cover;
-  width: 70vh;
-  height: 70vh;
-  box-shadow: 0 0 1em #fac4cf;
-}
-
-/* === ETOILES === */
-
-.stars {
-  position: absolute;
-  z-index: 1;
-  width: 70vh;
-  height: 70vh;
-}
-
-.star {
-  position: absolute;
-  height: 2.3vh;
-}
-
-.star:nth-child(1) {
-  left: 10.5vh;
-  top: 22.4vh;
-}
-
-.star:nth-child(2) {
-  left: 42.3vh;
-  top: 8.4vh;
-}
-
-.star:nth-child(3) {
-  left: 57.4vh;
-  top: 41.3vh;
-}
-
-/* === BOUTONS === */
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1vh;
-  align-items: center;
-}
-
 button {
   background-color: #fac4cf;
-  height: 8vh;
   font-family: 'Emilys Candy', cursive;
-  font-size: 1.8vw;
   color: #9886c7;
   letter-spacing: 0.05em;
   border-radius: 1vw;
@@ -90,31 +23,14 @@ button {
   cursor: pointer;
 }
 
-.btn:hover {
-  border: solid 0.5vw #9886c7;
-  transition: 0.5s;
+/* === COMMUN ===*/
+
+.title {
+  font-family: 'Emilys Candy', cursive;
+  letter-spacing: 0.05em;
 }
 
-.row {
-  margin-top: 1vh;
-}
-
-.row2 {
-  display: flex;
-  justify-content: space-between;
-  width: 70vh;
-}
-
-.row1 > button,
-.row2 > button {
-  width: 22vh;
-}
-
-.row3 > button {
-  width: 70vh;
-}
-
-/* === WELCOME === */
+/* --- COMMUN WELCOME ET FINISH --- */
 
 .page {
   display: flex;
@@ -131,11 +47,78 @@ button {
   color: #9886c7;
 }
 
-.page-button {
-  width: 20vw;
+.page > .text {
+  padding: 2vh 0;
 }
 
-/* === RECETTES === */
+.page > .text:nth-child(2) {
+  margin-top: 2vh;
+}
+
+.page .text:nth-child(3) {
+  margin-bottom: 2vh;
+}
+
+/* --- GAME BOARD --- */
+
+.game-board {
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  position: relative;
+  background-image: url(../images/screen.png);
+  background-size: cover;
+  box-shadow: 0 0 1em #fac4cf;
+}
+
+#avatar {
+  position: absolute;
+  z-index: 1;
+  transition: 0.7s;
+}
+
+/* Etoiles */
+
+.stars {
+  position: absolute;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+}
+
+/* Boutons */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn:hover {
+  border: solid 0.5vw #9886c7;
+  transition: 0.5s;
+}
+
+.row {
+  margin-top: 1vh;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --- RECETTES --- */
 
 .recipes {
   display: flex;
@@ -148,7 +131,6 @@ button {
   background-color: #9886c788;
   width: 100vw;
   height: 100vh;
-  text-align: center;
 }
 
 .recipe {
@@ -156,20 +138,15 @@ button {
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
-  width: 50vw;
-  height: 50vh;
   padding: 1em;
   background-color: #fac4cf;
   color: #9886c7;
-  border-radius: 2em;
-  border: solid 2px #9886c7;
+  border: solid 0.2vw #9886c7;
 }
 
 .recipe-close {
   align-self: flex-end;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
   font-family: sans-serif;
   color: #fac4cf;
   padding: 0;
@@ -183,28 +160,6 @@ button {
   transition: 0.2s;
 }
 
-.title {
-  font-family: 'Emilys Candy', cursive;
-  letter-spacing: 0.05em;
-  font-size: 3vw;
-}
-
-.text {
-  font-size: 1.5vw;
-}
-
-.page > .text {
-  padding: 2vh 0;
-}
-
-.page > .text:nth-child(2) {
-  margin-top: 2vh;
-}
-
-.page .text:nth-child(3) {
-  margin-bottom: 2vh;
-}
-
 .recipe-buttons {
   align-self: center;
 }
@@ -212,6 +167,289 @@ button {
 .recipe-button {
   width: 22vw;
   font-size: 1.8vw;
+}
+
+/** === RESPONSIVE === **/
+
+/* === SMARTPHONE === */
+
+@media screen and (max-width:767px) {
+  /* === GLOBAL === */
+  button {
+    height: 15vw;
+    font-size: 5vw;
+  }
+
+  /* === COMMUN === */
+  .title {
+    font-size: 8vw;
+  }
+  
+  .text {
+    font-size: 3.5vw;
+  }
+
+  /* --- COMMUN WELCOME ET FINISH --- */
+
+  .page {
+    padding: 2.5vw;
+    box-sizing: border-box;
+  }
+
+  .page-button {
+    width: 50vw;
+  }
+
+  /* --- GAME BOARD --- */
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  /* Commun */
+  .image,
+  .stars {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  /* Avatar */
+  #avatar {
+    width: calc(100vw / 15);
+    height: calc(100vw / 15);
+  }
+
+  /* Etoile */
+  .star {
+    width: 3.3vw;
+  }
+
+  .star:nth-child(1) {
+    left: 15vw;
+    top: 32vw;
+  }
+  
+  .star:nth-child(2) {
+    left: 60.4vw;
+    top: 12vw;
+  }
+  
+  .star:nth-child(3) {
+    left: 82vw;
+    top: 59vw;
+  }
+
+  /* Boutons */
+  .buttons {
+    margin: 2.5vw 0;
+  }
+
+  .row > button {
+    font-size: 4vw;
+  }
+
+  .row2,
+  .row3 > button {
+    width: 95vw;
+  }
+  
+  .row1 > button,
+  .row2 > button {
+    width: 30vw;
+  }
+
+  /* --- RECETTES --- */
+  .recipe {
+    width: 80vw;
+    height: 30vh;
+    border-radius: 2vh;
+  }
+
+  .recipe-close {
+    height: 8vw;
+    width: 8vw;
+  }
+
+  .recipe .title {
+    font-size: 5vw;
+  }
+    
+  .recipe-button {
+    width: 38vw;
+    font-size: 3vw;
+  }
+}
+
+/* === TABLET === */
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  /* === GLOBAL === */
+  button {
+    height: 8vh;
+    font-size: 1.8vh;
+  }
+
+  /* === COMMUN === */
+  .title {
+    font-size: 3vw;
+  }
+  
+  .text {
+    font-size: 1.5vw;
+  }
+
+  /* --- COMMUN WELCOME ET FINISH --- */
+  .page-button {
+    width: 20vw;
+  }
+
+  /* --- GAME BOARD --- */
+  /* Commun */
+  .image,
+  .stars {
+    width: 70vh;
+    height: 70vh;
+  }
+
+  /* Avatar */
+  #avatar {
+    width: calc(70vh / 15);
+    height: calc(70vh / 15);
+  }
+
+  /* Etoile */
+  .star {
+    height: 2.3vh;
+  }
+
+  .star:nth-child(1) {
+    left: 10.5vh;
+    top: 22.4vh;
+  }
+  
+  .star:nth-child(2) {
+    left: 42.3vh;
+    top: 8.4vh;
+  }
+  
+  .star:nth-child(3) {
+    left: 57.4vh;
+    top: 41.3vh;
+  }
+
+  /* Boutons */
+  .buttons {
+    margin-top: 1vh;
+  }
+
+  .row2,
+  .row3 > button {
+    width: 70vh;
+  }
+  
+  .row1 > button,
+  .row2 > button {
+    width: 22vh;
+  }
+
+  /* --- RECETTES --- */
+  .recipe {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 1vw;
+  }
+
+  .recipe-close {
+    height: 8vh;
+    width: 8vh;
+  }
+}
+
+/* === DESKTOP === */
+
+@media screen and (min-width:1024px) {
+  /* === GLOBAL === */
+  button {
+    height: 8vh;
+    font-size: 1.8vh;
+  }
+
+  /* === COMMUN === */
+  .title {
+    font-size: 3vw;
+  }
+  
+  .text {
+    font-size: 1.5vw;
+  }
+
+  /* --- COMMUN WELCOME ET FINISH --- */
+  .page-button {
+    width: 20vw;
+  }
+
+  /* --- GAME BOARD --- */
+  /* Commun */
+  .image,
+  .stars {
+    width: 70vh;
+    height: 70vh;
+  }
+  
+  /* Avatar */
+  #avatar {
+    width: calc(70vh / 15);
+    height: calc(70vh / 15);
+  }
+
+  /* Etoile */
+  .star {
+    height: 2.3vh;
+  }
+
+  .star:nth-child(1) {
+    left: 10.5vh;
+    top: 22.4vh;
+  }
+  
+  .star:nth-child(2) {
+    left: 42.3vh;
+    top: 8.4vh;
+  }
+  
+  .star:nth-child(3) {
+    left: 57.4vh;
+    top: 41.3vh;
+  }
+
+  /* Boutons */
+  .buttons {
+    margin-top: 1vh;
+  }
+
+  .row2,
+  .row3 > button {
+    width: 70vh;
+  }
+  
+  .row1 > button,
+  .row2 > button {
+    width: 22vh;
+  }
+
+  /* --- RECETTES --- */
+  .recipe {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 1vw;
+  }
+
+  .recipe-close {
+    height: 8vh;
+    width: 8vh;
+  }
+
 }
 
 .none {
