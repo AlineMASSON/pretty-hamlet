@@ -145,8 +145,8 @@ const app = {
         download: "burger_vegan_raclette_chanterelles_céleri",
         visited: false,
         star: {
-          x: 2.2,
-          y: 4.7,
+          x: 2.3,
+          y: 4.8,
         }
       },
       { // Arrivée 2ème maison
@@ -158,7 +158,7 @@ const app = {
         download: "flammekueche_vegane",
         visited: false,
         star: {
-          x: 9,
+          x: 9.05,
           y: 1.7,
         }
       },
@@ -171,8 +171,8 @@ const app = {
         download: "salade_chevre_chaud_vegetal",
         visited: false,
         star: {
-          x: 12.2,
-          y: 8.7,
+          x: 12.3,
+          y: 8.9,
         }
       }
     ],

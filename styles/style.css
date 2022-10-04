@@ -161,12 +161,10 @@ button {
 }
 
 .recipe-buttons {
+  display: flex;
+  justify-content: space-evenly;
   align-self: center;
-}
-
-.recipe-button {
-  width: 22vw;
-  font-size: 1.8vw;
+  width: 100%;
 }
 
 /** === RESPONSIVE === **/
@@ -222,22 +220,7 @@ button {
 
   /* Etoile */
   .star {
-    width: 3.3vw;
-  }
-
-  .star:nth-child(1) {
-    left: 15vw;
-    top: 32vw;
-  }
-  
-  .star:nth-child(2) {
-    left: 60.4vw;
-    top: 12vw;
-  }
-  
-  .star:nth-child(3) {
-    left: 82vw;
-    top: 59vw;
+    width: calc(100vw / 30);
   }
 
   /* Boutons */
@@ -281,6 +264,21 @@ button {
   }
   
   @media (orientation: landscape) {
+    /* === GLOBAL === */
+    button {
+      height: 10vw;
+      font-size: 4vw;
+    }
+
+    /* === COMMUN === */
+    .title {
+      font-size: 6vw;
+    }
+    
+    .text {
+      font-size: 3vw;
+    }
+
     /* --- GAME BOARD --- */
     .game-board {
       align-items: center;
@@ -296,7 +294,7 @@ button {
     
     /* Etoile */
     .star {
-      width: 4vh;
+      width: calc(100vh / 30);
     }
 
     /* Boutons */
@@ -346,21 +344,21 @@ button {
   /* === GLOBAL === */
   button {
     height: 8vh;
-    font-size: 1.8vh;
+    font-size: 3vw;
   }
 
   /* === COMMUN === */
   .title {
-    font-size: 3vw;
+    font-size: 5vw;
   }
   
   .text {
-    font-size: 1.5vw;
+    font-size: 3vw;
   }
 
   /* --- COMMUN WELCOME ET FINISH --- */
   .page-button {
-    width: 20vw;
+    width: 40vw;
   }
 
   /* --- GAME BOARD --- */
@@ -379,22 +377,7 @@ button {
 
   /* Etoile */
   .star {
-    height: 2.3vh;
-  }
-
-  .star:nth-child(1) {
-    left: 10.5vh;
-    top: 22.4vh;
-  }
-  
-  .star:nth-child(2) {
-    left: 42.3vh;
-    top: 8.4vh;
-  }
-  
-  .star:nth-child(3) {
-    left: 57.4vh;
-    top: 41.3vh;
+    width: calc(70vh / 30);
   }
 
   /* Boutons */
@@ -404,7 +387,7 @@ button {
 
   .row2,
   .row3 > button {
-    width: 70vh;
+    width: 95vw;
   }
 
   .row1 > button,
@@ -414,16 +397,104 @@ button {
 
   /* --- RECETTES --- */
   .recipe {
-    width: 50vw;
-    height: 50vh;
+    width: 80vw;
+    height: 40vh;
     border-radius: 1vw;
   }
 
   .recipe-close {
-    height: 8vh;
-    width: 8vh;
+    height: 4vh;
+    width: 4vh;
   }
 
+  .recipe-button {
+    width: 38vw;
+  }
+
+  @media (orientation: landscape) {
+    /* === GLOBAL === */
+    button {
+      height: 12vh;
+      font-size: 6vh;
+    }
+
+    /* === COMMUN === */
+    .title {
+      font-size: 4vw;
+    }
+
+    .text {
+      font-size: 2.5vw;
+    }
+
+    /* --- COMMUN WELCOME ET FINISH --- */
+    .page-button {
+      width: 40vw;
+    }
+
+    /* --- GAME BOARD --- */
+    .game-board {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content:space-between;
+    }
+    /* Commun */
+    .image,
+    .stars {
+      width: 100vh;
+      height: 100vh;
+    }
+    
+    /* Etoile */
+    .star {
+      width: calc(100vh / 30);
+    }
+
+    /* Boutons */
+    .buttons {
+      flex: 1;
+    }
+
+    .row > button {
+      font-size: 3vw;
+      height: 15vh;
+    }
+
+    .row1 > button,
+    .row2 > button {
+      width: calc(calc(95vw - 100vh) / 3);
+
+    }
+
+    .row2,
+    .row3 > button {
+      width: calc(98vw - 100vh);
+    }
+
+    /* Avatar */
+    #avatar {
+      width: calc(100vh / 15);
+      height: calc(100vh / 15);
+    }
+
+    /* --- RECETTES --- */
+    .recipe {
+      width: 80vw;
+      height: 80vh;
+      border-radius: 2vh;
+    }
+
+    .recipe-close {
+      height: 4vw;
+      width: 4vw;
+      font-size: 3vw;
+    }
+
+    .recipe-button {
+      height: 15vh;
+    }
+  }
 }
 
 /* === DESKTOP === */
@@ -432,7 +503,7 @@ button {
   /* === GLOBAL === */
   button {
     height: 8vh;
-    font-size: 1.8vh;
+    font-size: 4vh;
   }
 
   /* === COMMUN === */
@@ -465,22 +536,7 @@ button {
 
   /* Etoile */
   .star {
-    height: 2.3vh;
-  }
-
-  .star:nth-child(1) {
-    left: 10.5vh;
-    top: 22.4vh;
-  }
-  
-  .star:nth-child(2) {
-    left: 42.3vh;
-    top: 8.4vh;
-  }
-  
-  .star:nth-child(3) {
-    left: 57.4vh;
-    top: 41.3vh;
+    width: calc(70vh / 30);
   }
 
   /* Boutons */
@@ -506,10 +562,15 @@ button {
   }
 
   .recipe-close {
-    height: 8vh;
-    width: 8vh;
+    height: 5vh;
+    width: 5vh;
+    font-size: 4vh;
   }
 
+  .recipe-button {
+    width: 22vw;
+    font-size: 1.8vw;
+  }
 }
 
 .none {
